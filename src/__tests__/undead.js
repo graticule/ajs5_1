@@ -1,10 +1,12 @@
 import Character from '../character';
+import Undead from '../undead';
 
 test('Test creating Undead', () => {
-  const bowman = new Character('John', 'Undead');
-  expect(typeof bowman).toBe('Undead');
-  expect(bowman.health).toBe(100);
-  expect(bowman.level).toBe(1);
-  expect(bowman.attack).toBe(25);
-  expect(bowman.defense).toBe(25);
+  const undead = new Undead('John');
+  expect(undead instanceof Undead).toBe(true);
+  expect(undead instanceof Character).toBe(true);
+  expect(undead.health).toBe(100);
+  expect(undead.level).toBe(1);
+  expect(undead.attack).toBe(25);
+  expect(undead.defense).toBe(25);
 });

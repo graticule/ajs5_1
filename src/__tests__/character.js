@@ -14,9 +14,7 @@ test.each([
   expect(() => new Character(name, type)).toThrow(Error);
 });
 
-test('Test wrong type', () => {
+test.each([['bowman'], ['Bow man'], ['Killer']])('Test wrong type %s', (type) => {
   const name = 'John';
-  const type = 'Bow man';
-
   expect(() => new Character(name, type)).toThrow(Error);
 });

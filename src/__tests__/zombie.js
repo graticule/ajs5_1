@@ -1,10 +1,12 @@
 import Character from '../character';
+import Zombie from '../zombie';
 
 test('Test creating Zombie', () => {
-  const bowman = new Character('John', 'Zombie');
-  expect(typeof bowman).toBe('Zombie');
-  expect(bowman.health).toBe(100);
-  expect(bowman.level).toBe(1);
-  expect(bowman.attack).toBe(40);
-  expect(bowman.defense).toBe(10);
+  const zombie = new Zombie('John');
+  expect(zombie instanceof Zombie).toBe(true);
+  expect(zombie instanceof Character).toBe(true);
+  expect(zombie.health).toBe(100);
+  expect(zombie.level).toBe(1);
+  expect(zombie.attack).toBe(40);
+  expect(zombie.defense).toBe(10);
 });
