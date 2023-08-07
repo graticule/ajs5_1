@@ -8,5 +8,5 @@ test('Test creating Bowman', () => {
   expect(bowman.health).toBe(100);
   expect(bowman.level).toBe(1);
   expect(bowman.attack).toBe(25);
-  expect(bowman.defense).toBe(25);
+  expect(bowman.defence).toBe(25);
 });

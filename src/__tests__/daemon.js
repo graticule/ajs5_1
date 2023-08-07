@@ -8,5 +8,5 @@ test('Test creating Daemon', () => {
   expect(daemon.health).toBe(100);
   expect(daemon.level).toBe(1);
   expect(daemon.attack).toBe(10);
-  expect(daemon.defense).toBe(40);
+  expect(daemon.defence).toBe(40);
 });

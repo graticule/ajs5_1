@@ -8,5 +8,5 @@ test('Test creating Magician', () => {
   expect(magician.health).toBe(100);
   expect(magician.level).toBe(1);
   expect(magician.attack).toBe(10);
-  expect(magician.defense).toBe(40);
+  expect(magician.defence).toBe(40);
 });
