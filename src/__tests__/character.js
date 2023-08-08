@@ -13,3 +13,24 @@ test.each([
   const type = 'Bowman';
   expect(() => new Character(name, type)).toThrow(Error);
 });
+
+test.each([
+  ['Bowman'],
+  ['Swordsman'],
+  ['Magician'],
+  ['Daemon'],
+  ['Undead'],
+  ['Zombie'],
+])('Test correct type %s', (type) => {
+  const name = 'John';
+  expect(() => new Character(name, type)).not.toThrow(Error);
+});
+
+test.each([
+  ['Killer'],
+  ['Bowerman'],
+  ['Player'],
+])('Test incorrect type %s', (type) => {
+  const name = 'John';
+  expect(() => new Character(name, type)).toThrow(Error);
+});
